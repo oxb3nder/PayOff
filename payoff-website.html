@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PayOff — The Complete Debt Payoff Roadmap</title>
+<meta name="description" content="The only debt guide covering every type — credit cards, student loans, medical bills, car loans, mortgage, and collections. Real strategies, legal loopholes, and word-for-word scripts.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0a0a0f;
+    --ink2: #1c1c2e;
+    --paper: #f8f7f3;
+    --cream: #f0ede4;
+    --blue: #1a3fb8;
+    --blue-light: #e8edff;
+    --green: #0d7a5f;
+    --green-light: #e0f5ef;
+    --gold: #c9a84c;
+    --gray: #6b6b7b;
+    --border: #e2e0d8;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+    background: rgba(248,247,243,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; letter-spacing: -0.03em; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--blue); }
+  .nav-cta { background: var(--ink); color: var(--paper); font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.875rem; padding: 0.6rem 1.4rem; border-radius: 100px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+  .nav-cta:hover { background: var(--blue); transform: translateY(-1px); }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 2.5rem 5rem; position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(26,63,184,0.07) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 70%, rgba(13,122,95,0.06) 0%, transparent 70%); }
+  .hero-grid { position: absolute; inset: 0; z-index: 0; opacity: 0.035; background-image: linear-gradient(var(--ink) 1px, transparent 1px), linear-gradient(90deg, var(--ink) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .hero-label { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--blue-light); color: var(--blue); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; animation: fadeUp 0.6s ease both; }
+  .hero-label::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+  h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.8rem, 5vw, 4.2rem); line-height: 1.05; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 1.5rem; animation: fadeUp 0.6s 0.1s ease both; }
+  h1 em { font-style: normal; color: var(--blue); }
+  .hero-sub { font-size: 1.1rem; font-weight: 300; color: var(--gray); line-height: 1.7; margin-bottom: 2.5rem; animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--blue); color: white; font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 1rem; padding: 0.9rem 2rem; border-radius: 100px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(26,63,184,0.25); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(26,63,184,0.35); }
+  .price-tag { font-size: 0.9rem; color: var(--gray); display: flex; align-items: center; gap: 0.4rem; }
+  .price-tag s { color: #bbb; }
+  .price-tag strong { color: var(--green); font-weight: 600; }
+
+  /* BOOK CARD */
+  .hero-visual { animation: fadeUp 0.6s 0.15s ease both; }
+  .book-card { background: white; border-radius: 20px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 24px 80px rgba(0,0,0,0.1), 0 4px 16px rgba(0,0,0,0.06); }
+  .book-cover { background: var(--ink2); padding: 2.5rem 2rem; position: relative; overflow: hidden; }
+  .book-cover::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(26,63,184,0.4), transparent 70%); }
+  .book-cover::after { content: ''; position: absolute; bottom: -20px; left: -20px; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle, rgba(13,122,95,0.3), transparent 70%); }
+  .book-tag { display: inline-block; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 100px; margin-bottom: 1.2rem; position: relative; z-index: 1; }
+  .book-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; line-height: 1.1; color: white; margin-bottom: 0.5rem; position: relative; z-index: 1; }
+  .book-subtitle { font-size: 0.85rem; color: rgba(255,255,255,0.55); font-weight: 300; position: relative; z-index: 1; }
+  .book-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 1px solid var(--border); }
+  .stat { padding: 1.2rem 1rem; text-align: center; border-right: 1px solid var(--border); }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--blue); display: block; margin-bottom: 0.2rem; }
+  .stat-label { font-size: 0.72rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; }
+  .book-includes { padding: 1.25rem 1.5rem; background: var(--cream); border-top: 1px solid var(--border); }
+  .book-includes p { font-size: 0.78rem; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.7rem; }
+  .include-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.875rem; color: var(--ink2); margin-bottom: 0.4rem; }
+  .include-item::before { content: '✓'; color: var(--green); font-weight: 700; font-size: 0.8rem; }
+
+  /* PROOF STRIP */
+  .proof-strip { background: var(--ink2); padding: 1.5rem 2.5rem; display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+  .proof-item { display: flex; align-items: center; gap: 0.75rem; color: rgba(255,255,255,0.7); font-size: 0.875rem; }
+  .proof-icon { font-size: 1.1rem; }
+  .proof-item strong { color: white; }
+
+  /* SECTIONS */
+  section { padding: 6rem 2.5rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+  h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 1rem; }
+  .section-sub { font-size: 1.05rem; color: var(--gray); font-weight: 300; line-height: 1.7; max-width: 560px; margin-bottom: 3.5rem; }
+
+  /* CHAPTERS */
+  .chapters-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .chapter-card { background: white; padding: 1.75rem; transition: background 0.2s; }
+  .chapter-card:hover { background: var(--blue-light); }
+  .chapter-num { font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.6rem; }
+  .chapter-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: var(--ink2); margin-bottom: 0.5rem; line-height: 1.3; }
+  .chapter-desc { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
+
+  /* LOOPHOLES */
+  .loopholes { background: var(--ink2); }
+  .loopholes h2 { color: white; }
+  .loopholes .section-sub { color: rgba(255,255,255,0.5); }
+  .loopholes .section-label { color: var(--gold); }
+  .tricks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .trick-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1.5rem; transition: background 0.2s, border-color 0.2s; }
+  .trick-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); }
+  .trick-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  .trick-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; color: white; margin-bottom: 0.5rem; }
+  .trick-desc { font-size: 0.825rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+  /* FOR WHO */
+  .for-who { background: var(--cream); }
+  .debt-types { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 3rem; }
+  .debt-pill { background: white; border: 1px solid var(--border); border-radius: 100px; padding: 0.55rem 1.25rem; font-size: 0.875rem; color: var(--ink2); font-weight: 500; display: flex; align-items: center; gap: 0.5rem; }
+  .debt-pill::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
+
+  /* TESTIMONIALS */
+  .testimonials { background: var(--paper); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+  .testimonial { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; }
+  .stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
+  .testimonial-text { font-size: 0.95rem; color: var(--ink2); line-height: 1.7; margin-bottom: 1.25rem; font-style: italic; font-weight: 300; }
+  .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+  .author-avatar { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; color: white; }
+  .author-name { font-weight: 600; font-size: 0.875rem; color: var(--ink2); }
+  .author-detail { font-size: 0.78rem; color: var(--gray); }
+  /* SCRIPTS */
+  .scripts-section { background: var(--paper); }
+  .scripts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+  .script-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: border-color 0.2s; }
+  .script-card:hover { border-color: var(--blue); }
+  .script-top { background: var(--ink2); padding: 1.4rem 1.5rem; }
+  .script-num { font-size: 0.65rem; color: var(--gold); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+  .script-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; color: white; line-height: 1.3; }
+  .script-body { padding: 1.25rem 1.5rem; background: white; }
+  .script-locked { display: flex; flex-direction: column; gap: 0.45rem; }
+  .script-line { height: 9px; background: var(--cream); border-radius: 2px; }
+  .script-line.l1 { width: 100%; }
+  .script-line.l2 { width: 80%; }
+  .script-line.l3 { width: 92%; }
+  .script-note { margin-top: 0.65rem; font-size: 0.72rem; font-weight: 600; color: var(--gold); letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 0.35rem; }
+
+  /* CTA */
+  .cta-section { background: var(--blue); text-align: center; padding: 7rem 2.5rem; position: relative; overflow: hidden; }
+  .cta-section::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%); pointer-events: none; }
+  .cta-section h2 { color: white; max-width: 600px; margin: 0 auto 1rem; }
+  .cta-section p { color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 480px; margin: 0 auto 2.5rem; font-weight: 300; }
+  .btn-white { display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: var(--blue); font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 1rem; padding: 1rem 2.25rem; border-radius: 100px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(0,0,0,0.15); }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+  .cta-note { margin-top: 1.25rem; font-size: 0.825rem; color: rgba(255,255,255,0.45); }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: rgba(255,255,255,0.4); padding: 2rem 2.5rem; text-align: center; font-size: 0.825rem; }
+  footer strong { color: rgba(255,255,255,0.7); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.25rem; }
+    .hero { padding: 7rem 1.25rem 4rem; }
+    .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-visual { order: -1; }
+    section { padding: 4rem 1.25rem; }
+    .proof-strip { gap: 1.5rem; padding: 1.25rem; }
+    .cta-section { padding: 5rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Pay<span>Off</span></a>
+  <a href="https://juvik.gumroad.com/l/debt-payoff-roadmap?coupon=PAYOFF50" class="nav-cta">Get the Guide →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-label">Complete Debt Freedom System</div>
+      <h1>Stop paying interest.<br><em>Start paying it off.</em></h1>
+      <p class="hero-sub">The only guide that covers every type of debt — credit cards, student loans, medical bills, car loans, mortgage, and more — with real strategies, legal loopholes, and word-for-word negotiation scripts.</p>
+      <div class="hero-actions">
+        <a href="https://juvik.gumroad.com/l/debt-payoff-roadmap?coupon=PAYOFF50" class="btn-primary">Get the Roadmap ↗</a>
+        <div class="price-tag"><s>$34</s><strong>$17 today</strong></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-tag">Digital Guide + Worksheets</div>
+          <div class="book-title">The Complete<br>Debt Payoff Roadmap</div>
+          <div class="book-subtitle">Every type of debt. Every real strategy.</div>
+        </div>
+        <div class="book-stats">
+          <div class="stat"><span class="stat-num">14</span><span class="stat-label">Chapters</span></div>
+          <div class="stat"><span class="stat-num">10</span><span class="stat-label">Loopholes</span></div>
+          <div class="stat"><span class="stat-num">5</span><span class="stat-label">Scripts</span></div>
+        </div>
+        <div class="book-includes">
+          <p>What's included</p>
+          <div class="include-item">Complete PDF Guide (40+ pages)</div>
+          <div class="include-item">4 Fillable Worksheets</div>
+          <div class="include-item">Word-for-word Negotiation Scripts</div>
+          <div class="include-item">90-Day Attack Plan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF STRIP -->
+<div class="proof-strip">
+  <div class="proof-item"><span class="proof-icon">📄</span><strong>Every debt type covered</strong></div>
+  <div class="proof-item"><span class="proof-icon">⚖️</span><strong>100% legal strategies</strong></div>
+  <div class="proof-item"><span class="proof-icon">⚡</span><strong>Instant PDF download</strong></div>
+  <div class="proof-item"><span class="proof-icon">💬</span><strong>Word-for-word scripts included</strong></div>
+</div>
+
+<!-- CHAPTERS -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">What's inside</div>
+    <h2>A playbook for every debt you have</h2>
+    <p class="section-sub">Most debt guides cover credit cards and stop there. This covers everything — with specific tactics for each debt type.</p>
+    <div class="chapters-grid">
+      <div class="chapter-card"><div class="chapter-num">Chapter 4</div><div class="chapter-title">Credit Card Debt</div><div class="chapter-desc">Balance transfer stacking, 0% APR hacks, hardship programs, settlement scripts, and how to call your way to a lower rate.</div></div>
+      <div class="chapter-card"><div class="chapter-num">Chapter 5</div><div class="chapter-title">Student Loans</div><div class="chapter-desc">Federal vs. private, PSLF forgiveness, IDR plans, biweekly payment trick, autopay discounts, and how to apply extra payments correctly.</div></div>
+      <div class="chapter-card"><div class="chapter-num">Chapter 6</div><div class="chapter-title">Medical Debt</div><div class="chapter-desc">How to spot billing errors, access charity care programs, and negotiate 40–60% off your bill — legally, on your own.</div></div>
+      <div class="chapter-card"><div class="chapter-num">Chapter 7</div><div class="chapter-title">Car Loans</div><div class="chapter-desc">Refinancing for lower rates, principal-only payments, voluntary surrender vs. repossession, and how to trade down intelligently.</div></div>
+      <div class="chapter-card"><div class="chapter-num">Chapter 8</div><div class="chapter-title">Personal Loans</div><div class="chapter-desc">Refinancing strategies, debt consolidation pros and cons, and how to negotiate hardship options directly with lenders.</div></div>
+      <div class="chapter-card"><div class="chapter-num">Chapter 9</div><div class="chapter-title">Mortgage & Housing</div><div class="chapter-desc">Mortgage recasting, biweekly payments, PMI cancellation, applying windfalls to principal, and when to refinance vs. recast.</div></div>
+      <div class="chapter-card"><div class="chapter-num">Chapter 10</div><div class="chapter-title">Collections & Zombie Debt</div><div class="chapter-desc">Statute of limitations shield, debt validation letters, your FDCPA rights, pay-for-delete negotiations, and the 7-year rule.</div></div>
+      <div class="chapter-card"><div class="chapter-num">Chapters 1–3</div><div class="chapter-title">The Foundation</div><div class="chapter-desc">Full debt inventory system, Snowball vs. Avalanche breakdown, subscription audit, and how to find $200/month you didn't know you had.</div></div>
+      <div class="chapter-card"><div class="chapter-num">Chapters 11–14</div><div class="chapter-title">Advanced Strategies + Tools</div><div class="chapter-desc">10 legal loopholes, 5 negotiation scripts, a 90-day attack plan, and 4 worksheets to track every dollar of progress.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOOPHOLES -->
+<section class="loopholes">
+  <div class="section-inner">
+    <div class="section-label">Legal loopholes</div>
+    <h2>Tricks the banks won't tell you</h2>
+    <p class="section-sub">Real, legal strategies built into the financial system that you're fully entitled to use — but almost nobody knows about.</p>
+    <div class="tricks-grid">
+      <div class="trick-card"><div class="trick-icon">🔄</div><div class="trick-title">Balance Transfer Stacking</div><div class="trick-desc">Rotate debt through 0% APR cards back to back. Pay zero interest — indefinitely — while crushing your balance.</div></div>
+      <div class="trick-card"><div class="trick-icon">📅</div><div class="trick-title">The Biweekly Hack</div><div class="trick-desc">Pay half your monthly payment every two weeks. You'll make one extra full payment per year without feeling it.</div></div>
+      <div class="trick-card"><div class="trick-icon">🛡️</div><div class="trick-title">Zombie Debt Shield</div><div class="trick-desc">Old debt has a legal expiration date. After the statute of limitations, collectors can't sue you. Know when you're protected.</div></div>
+      <div class="trick-card"><div class="trick-icon">📞</div><div class="trick-title">Hardship Programs</div><div class="trick-desc">Credit card companies have secret programs with lower rates and waived fees — but only if you call and ask correctly.</div></div>
+      <div class="trick-card"><div class="trick-icon">🎯</div><div class="trick-title">Principal-Only Payments</div><div class="trick-desc">Lenders default to advancing your due date — not reducing your balance. One phrase changes everything.</div></div>
+      <div class="trick-card"><div class="trick-icon">🏥</div><div class="trick-title">Medical Charity Care</div><div class="trick-desc">Every nonprofit hospital must offer financial assistance. Most patients never ask. You could qualify for 50–100% reduction.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="for-who">
+  <div class="section-inner">
+    <div class="section-label">Who this is for</div>
+    <h2>If you have any of these — this is for you</h2>
+    <p class="section-sub">Built for real people dealing with real debt. Every type is covered with its own dedicated chapter and strategy.</p>
+    <div class="debt-types">
+      <div class="debt-pill">Credit card debt</div>
+      <div class="debt-pill">Student loans</div>
+      <div class="debt-pill">Medical bills</div>
+      <div class="debt-pill">Car payments</div>
+      <div class="debt-pill">Personal loans</div>
+      <div class="debt-pill">Mortgage</div>
+      <div class="debt-pill">Collections</div>
+      <div class="debt-pill">Payday loans</div>
+      <div class="debt-pill">Old zombie debt</div>
+      <div class="debt-pill">Multiple debts at once</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-inner">
+    <div class="section-label">What people are saying</div>
+    <h2>Real results, real people</h2>
+    <p class="section-sub">Thousands of people have used these exact strategies to eliminate debt and take back their finances.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">&ldquo;I didn&rsquo;t know you could just call and ask for a lower rate. Did it the same day I read this guide and they dropped me from 24% to 14%. That&rsquo;s real money saved every single month.&rdquo;</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#1a3fb8;">MR</div>
+          <div><div class="author-name">Marcus R.</div><div class="author-detail">Paid off $8,400 in 14 months</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">&ldquo;The medical debt chapter alone saved me over $2,000. I had no idea hospitals have charity programs. I applied, qualified, and they zeroed out my entire balance.&rdquo;</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#0d7a5f;">DL</div>
+          <div><div class="author-name">Dana L.</div><div class="author-detail">Eliminated $3,200 in medical debt</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">&ldquo;The 90-day plan is the most practical thing I&rsquo;ve ever read about money. Not theory — actual steps for actual weeks. I&rsquo;m on month 3 and I&rsquo;ve already paid off two credit cards.&rdquo;</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#7c3aed;">TW</div>
+          <div><div class="author-name">Tanya W.</div><div class="author-detail">2 credit cards eliminated</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<section class="scripts-section">
+  <div class="section-inner">
+    <div class="section-label">Negotiation scripts</div>
+    <h2>5 word-for-word scripts. Read off your phone.</h2>
+    <p class="section-sub">Every script covers what to say, when to say it, and exactly what to do if they say no. Included in the guide.</p>
+    <div class="scripts-grid">
+      <div class="script-card"><div class="script-top"><div class="script-num">Script 01</div><div class="script-title">Lower Your Credit Card Interest Rate</div></div><div class="script-body"><div class="script-locked"><div class="script-line l1"></div><div class="script-line l2"></div><div class="script-line l3"></div><div class="script-note">🔒 Full script in the guide</div></div></div></div>
+      <div class="script-card"><div class="script-top"><div class="script-num">Script 02</div><div class="script-title">Request a Hardship Program</div></div><div class="script-body"><div class="script-locked"><div class="script-line l1"></div><div class="script-line l2"></div><div class="script-line l3"></div><div class="script-note">🔒 Full script in the guide</div></div></div></div>
+      <div class="script-card"><div class="script-top"><div class="script-num">Script 03</div><div class="script-title">Negotiate a Medical Bill</div></div><div class="script-body"><div class="script-locked"><div class="script-line l1"></div><div class="script-line l2"></div><div class="script-line l3"></div><div class="script-note">🔒 Full script in the guide</div></div></div></div>
+      <div class="script-card"><div class="script-top"><div class="script-num">Script 04</div><div class="script-title">Settle a Collection Account</div></div><div class="script-body"><div class="script-locked"><div class="script-line l1"></div><div class="script-line l2"></div><div class="script-line l3"></div><div class="script-note">🔒 Full script in the guide</div></div></div></div>
+      <div class="script-card"><div class="script-top"><div class="script-num">Script 05</div><div class="script-title">Request Debt Validation by Law</div></div><div class="script-body"><div class="script-locked"><div class="script-line l1"></div><div class="script-line l2"></div><div class="script-line l3"></div><div class="script-note">🔒 Full script in the guide</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="get">
+  <div style="position:relative;z-index:1;">
+    <h2>Your debt has an expiration date.<br>Set it today.</h2>
+    <p>Get instant access to the complete guide, all worksheets, negotiation scripts, and your 90-day plan.</p>
+    <a href="https://juvik.gumroad.com/l/debt-payoff-roadmap?coupon=PAYOFF50" class="btn-white">Get Instant Access — $17 ↗</a>
+    <div class="cta-note">PDF download · Instant delivery · 50% off applied automatically · One-time payment</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>PayOff</strong> — The Complete Debt Payoff Roadmap<br>
+  <span style="margin-top:0.5rem;display:block;">Results depend on individual effort and financial circumstances. This guide is for educational purposes only and does not constitute financial or legal advice.</span>
+</footer>
+
+</body>
+</html>
